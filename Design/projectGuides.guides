@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ProjectGuidesConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectItemGuides>
+    <ProjectItemGuide TargetFile="Profile.xaml">
+      <GuideModels>
+        <GuideModel>
+          <Guides>
+            <Guide Alignment="Top" Position="83" />
+            <Guide Alignment="Top" Position="243" />
+            <Guide Alignment="Left" Position="418" />
+            <Guide Alignment="Left" Position="166" />
+            <Guide Alignment="Left" Position="196" />
+            <Guide Alignment="Left" Position="23" />
+            <Guide Alignment="Left" Position="689" />
+          </Guides>
+        </GuideModel>
+      </GuideModels>
+    </ProjectItemGuide>
+    <ProjectItemGuide TargetFile="App.xaml">
+      <GuideModels>
+        <GuideModel>
+          <Guides>
+            <Guide Alignment="Top" Position="-25" />
+            <Guide Alignment="Top" Position="103" />
+            <Guide Alignment="Left" Position="133" />
+            <Guide Alignment="Left" Position="5" />
+          </Guides>
+        </GuideModel>
+      </GuideModels>
+    </ProjectItemGuide>
+    <ProjectItemGuide TargetFile="MainWindow.xaml">
+      <GuideModels>
+        <GuideModel>
+          <Guides>
+            <Guide Alignment="Top" Position="7" />
+            <Guide Alignment="Left" Position="85" />
+            <Guide Alignment="Left" Position="290" />
+            <Guide Alignment="Left" Position="1260" />
+            <Guide Alignment="Left" Position="693" />
+            <Guide Alignment="Left" Position="326" />
+            <Guide Alignment="Top" Position="595" />
+            <Guide Alignment="Left" Position="73" />
+            <Guide Alignment="Top" Position="692" />
+            <Guide Alignment="Left" Position="3" />
+            <Guide Alignment="Left" Position="777" />
+          </Guides>
+        </GuideModel>
+      </GuideModels>
+    </ProjectItemGuide>
+  </ProjectItemGuides>
+</ProjectGuidesConfiguration>

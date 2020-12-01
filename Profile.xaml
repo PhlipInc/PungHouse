@@ -1,0 +1,26 @@
+﻿<Window x:Class="PungHouse.Profile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PungHouse"
+        mc:Ignorable="d"
+        Title="Profile" Height="425" Width="900" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Canvas Margin="0,-0.333,0,0.333" Width="900" Height="425">
+        <Rectangle x:Name="MainControl" Fill="#FF718093" Stroke="Black" RadiusY="21.5" RadiusX="21.5" StrokeThickness="4" Height="425" Width="900" MouseLeftButtonDown="MainControl_MouseLeftButtonDown"/>
+        <Button x:Name="CloseProfileButton" Content="Close Profile Page" Height="81.333" Canvas.Left="689.023" Canvas.Top="267.748" Width="207" Click="Button_Click" Background="{x:Null}" BorderBrush="#FF0097E6" BorderThickness="0,0,5,5" Style="{DynamicResource ProfileButtonStyle}" FontSize="22"/>
+        <TextBlock x:Name="FirstNameBlock" Height="26.667" Canvas.Left="216.472" TextWrapping="Wrap" Text="Ignace Maes" Canvas.Top="83.333" Width="251.998" FontSize="20" MouseLeftButtonDown="MainControl_MouseLeftButtonDown"/>
+        <TextBlock x:Name="LastInputBlock" Height="27.667" Canvas.Left="246.472" TextWrapping="Wrap" Text="111 Street of the Street, City State, Zip Code" Canvas.Top="127.333" Width="442.528" FontSize="20" MouseLeftButtonDown="MainControl_MouseLeftButtonDown"/>
+        <TextBlock x:Name="SecondToLastInput" Height="28.667" Canvas.Left="246.472" TextWrapping="Wrap" Text="thisisgoingtobetheemailaddress@emaiil.com" Canvas.Top="171.333" Width="442.528" FontSize="20" MouseLeftButtonDown="MainControl_MouseLeftButtonDown"/>
+        <TextBlock x:Name="LastInput" Height="28" Canvas.Left="216.472" TextWrapping="Wrap" Text="(999)-999-9999" Canvas.Top="215.333" Width="251.998" FontSize="20" MouseLeftButtonDown="MainControl_MouseLeftButtonDown"/>
+        <Image x:Name="ProfileImageIcon" Height="160" Canvas.Left="60.472" Canvas.Top="83.333" Width="180.674" Source="man.png" MouseLeftButtonDown="MainControl_MouseLeftButtonDown"/>
+        <Canvas Height="75.919" Canvas.Top="349.081" Width="900">
+            <Path x:Name="BottomControlBox" Data="M0,0 L21.499994,0 870.52802,0 892.02802,0 892.02802,21.500007 892.02802,41.251005 892.02802,52.085005 C892.02802,63.959127 882.4021,73.585005 870.52802,73.585012 L21.499994,73.585012 C9.6258783,73.585005 -5.6843419E-14,63.959127 0,52.085005 L0,41.251005 0,21.500007 z" Fill="#FF718093" Height="75.919" Stretch="Fill" StrokeThickness="4" Width="900" Stroke="Black" />
+            <WrapPanel Orientation="Vertical" Width="900" Height="75.919">
+                <Label x:Name="DateLabel" Content="DATE:TIME" Height="75.919" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" FontFamily="Roboto" FontSize="36" Loaded="DateTimeLabel_Loaded" Margin="24,0"/>
+                <Rectangle Fill="#FF718093" Height="73.232" Stroke="Black" StrokeThickness="2" Width="4" Margin="0,0,24,0"/>
+                <Label x:Name="TimeLabel" Content="DATE:TIME" Height="75.919" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" FontFamily="Roboto" FontSize="36" Loaded="DateTimeLabel_Loaded" Margin="0,0,24,0"/>
+            </WrapPanel>
+        </Canvas>
+    </Canvas>
+</Window>

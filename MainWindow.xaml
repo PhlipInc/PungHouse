@@ -1,0 +1,89 @@
+﻿<Window x:Name="MainWindow1" x:Class="PungHouse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PungHouse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1280" Background="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Roboto" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Canvas x:Name="Main_Canvas" Margin="0,5">
+        <Rectangle x:Name="MainControl" Fill="#FF718093" Stroke="Black" Height="690" RadiusY="21.5" RadiusX="21.5" Width="1280" d:LayoutOverrides="Height" StrokeThickness="2"/>
+        <Rectangle Fill="Black" Height="1.313" Canvas.Left="17.932" Stroke="Black" StrokeThickness="2" Canvas.Top="687.478" Width="2.948"/>
+        <Canvas x:Name="EmployeePage" Height="582" Canvas.Left="330" Canvas.Top="98" Width="940">
+            <ListBox x:Name="Employee_ListBox" Foreground="#FFDCDDE1" Height="458.898" Width="363" FontSize="24" Style="{DynamicResource ListBoxStyle1}">
+                <ListBoxItem Content="Content 1" Height="50" Margin="0,5"/>
+                <ListBoxItem Content="Content 2" Height="50" Margin="0,5"/>
+                <ListBoxItem Content="Content 3" Height="50" Margin="0,5"/>
+            </ListBox>
+            <Button x:Name="Employee_DeleteButton" Content="Delete" Height="65.5" Background="{x:Null}" BorderBrush="#FFC23616" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="145.5" d:LayoutOverrides="HorizontalAlignment, Width" Canvas.Left="217.5" Canvas.Top="497.476" ForceCursor="True" Style="{DynamicResource RedButtonStyle}"/>
+            <Button x:Name="Employee_NewButton" Content="New" Height="65.5" Background="{x:Null}" BorderBrush="#44bd32" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145.5" Canvas.Top="497.476" Style="{DynamicResource GreenButtonStyle}"/>
+            <TextBox x:Name="Employee_FirstNameBox" Height="46" Canvas.Left="418.5" TextWrapping="Wrap" Text="First Name" Canvas.Top="57" Width="245" FontSize="24" BorderBrush="#FF8C7AE6" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Employee_LastNameBox" Height="46" Canvas.Left="683.499" TextWrapping="Wrap" Text="Last Name" Canvas.Top="57" Width="247.501" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Employee_AddressBoxLine1" Height="46" Canvas.Left="418.5" TextWrapping="Wrap" Text="Address Line 1" Canvas.Top="135" Width="512.5" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Employee_AddressBoxLine2" Height="46" Canvas.Left="418.5" TextWrapping="Wrap" Text="Address Line 2 " Canvas.Top="213" Width="512.5" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Employee_CityBox" Height="46" Canvas.Left="418.5" TextWrapping="Wrap" Text="Mooselookmeguntic" Canvas.Top="291.052" Width="244.5" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Employee_ProvinceBox" Height="46" Canvas.Left="684" TextWrapping="Wrap" Text="Massachusetts" Canvas.Top="291.052" Width="246" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Employee_PhoneBox"  Height="46" Canvas.Left="419.5" TextWrapping="Wrap" Text="(999)-999-9999" Canvas.Top="369.018" Width="233.5" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Employee_DOBox" Height="46" Canvas.Left="663" TextWrapping="Wrap" Text="31/31/3030" Canvas.Top="369.018" Width="157" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Employee_ZipCodeBox" Height="46" Canvas.Left="832" TextWrapping="Wrap" Text="99999" Canvas.Top="369.018" Width="98" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <Button x:Name="Employee_SaveButton" Content="Save" Height="65.5" Background="{x:Null}" BorderBrush="#FF44BD32" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="145.5" Canvas.Left="784.5" Canvas.Top="497.476" d:LayoutOverrides="HorizontalAlignment, Width" Style="{DynamicResource GreenButtonStyle}"/>
+        </Canvas>
+        <Canvas x:Name="SchedulePage" Height="582" Canvas.Left="330" Canvas.Top="98" Width="940" Visibility="Collapsed" d:IsHidden="True">
+            <ListBox x:Name="Schedule_EmployeeList" Foreground="#FFDCDDE1" Height="458.898" Width="363" FontSize="24" Style="{DynamicResource ListBoxStyle1}" d:IsHidden="True">
+                <ListBoxItem Content="Content 1" Height="50" Margin="0,5"/>
+                <ListBoxItem Content="Content 2" Height="50" Margin="0,5"/>
+                <ListBoxItem Content="Content 3" Height="50" Margin="0,5"/>
+            </ListBox>
+            <Button x:Name="Schedule_PrintButton" Content="Print Schedule" Height="65.5" Background="{x:Null}" BorderBrush="#FF44BD32" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="363" Canvas.Top="497.5" d:LayoutOverrides="HorizontalAlignment" Style="{DynamicResource GreenButtonStyle}"/>
+            <Button x:Name="Schedule_SaveButton" Content="Save" Height="65.5" Background="{x:Null}" BorderBrush="#FF44BD32" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="145.5" Canvas.Left="784.5" Canvas.Top="497.5" d:LayoutOverrides="HorizontalAlignment, Width" Style="{DynamicResource GreenButtonStyle}"/>
+            <Viewbox Height="505" Canvas.Left="380" Canvas.Top="2" Width="505" Stretch="Fill">
+                <Calendar x:Name="Schedule_Calendar" Height="200" Width="200" DisplayDateEnd="2030-11-15" DisplayDateStart="2020-11-15" SelectedDatesChanged="Schedule_Calendar_SelectedDatesChanged" DisplayDateChanged="Schedule_Calendar_DisplayDateChanged"/>
+            </Viewbox>
+            <Label x:Name="Schedule_ClockInLabel" Content="Clock In:" Canvas.Left="406.359" Canvas.Top="428.793" FontSize="36" Foreground="#FFFBC531" Height="53"/>
+        </Canvas>
+        <Canvas x:Name="CustomerPage" Height="582" Canvas.Left="330" Canvas.Top="98" Width="940" Visibility="Collapsed" d:IsHidden="True">
+            <ListBox x:Name="Customer_ListBox" Foreground="#FFDCDDE1" Height="458.898" Width="363" FontSize="24" Style="{DynamicResource ListBoxStyle1}">
+                <ListBoxItem Content="Content 1" Height="50" Margin="0,5"/>
+                <ListBoxItem Content="Content 2" Height="50" Margin="0,5"/>
+                <ListBoxItem Content="Content 3" Height="50" Margin="0,5"/>
+            </ListBox>
+            <Button x:Name="Customer_DeleteButton" Content="Delete" Height="65.5" Background="{x:Null}" BorderBrush="#FFC23616" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="145.5" Canvas.Left="217.5" Canvas.Top="497.476" d:LayoutOverrides="HorizontalAlignment, Width" Style="{DynamicResource RedButtonStyle}"/>
+            <TextBox x:Name="Customer_FistNameBox" Height="46" Canvas.Left="418.5" TextWrapping="Wrap" Text="First Name" Canvas.Top="57" Width="245" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Customer_LastNameBox" Height="46" Canvas.Left="683.499" TextWrapping="Wrap" Text="Last Name" Canvas.Top="57" Width="247.501" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Customer_Date" Height="46" Canvas.Left="418.5" TextWrapping="Wrap" Text="31/31/3030" Canvas.Top="135" Width="244.5" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <TextBox x:Name="Customer_Time" Height="46" Canvas.Left="684" TextWrapping="Wrap" Text="23:59 PM" Canvas.Top="135" Width="247" FontSize="24" BorderBrush="#FF9C88FF" BorderThickness="0,0,0,12" Style="{DynamicResource PurpleTextBoxStyle}"/>
+            <Button x:Name="Customer_SaveButton" Content="Save" Height="65.5" Background="{x:Null}" BorderBrush="#FF44BD32" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="145.5" Canvas.Left="784.5" Canvas.Top="497.476" d:LayoutOverrides="HorizontalAlignment" Style="{DynamicResource GreenButtonStyle}"/>
+            <Button x:Name="Customer_PrintPageButton" Content="Print Customer Record" Height="65.5" Background="{x:Null}" BorderBrush="#FF44BD32" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="511.5" Canvas.Left="418.5" Canvas.Top="284.647" d:LayoutOverrides="HorizontalAlignment" Style="{DynamicResource GreenButtonStyle}"/>
+            <Button x:Name="Customer_NewButton" Content="New" Height="65.5" Background="{x:Null}" BorderBrush="#FF44BD32" BorderThickness="0,0,0,6" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="145.5" Canvas.Top="497.476" Style="{DynamicResource GreenButtonStyle}"/>
+        </Canvas>
+        <Canvas x:Name="Control_Canvas" Height="90" Width="1280">
+            <Path x:Name="ControlBox" Data="M22.00001,0.5 L1258,0.5 C1269.8741,0.50000572 1279.5,10.125883 1279.5,22.00001 L1279.5,30.500005 1279.5,68.000002 1279.5,89.50001 1258,89.50001 22.00001,89.50001 0.5,89.50001 0.5,68.000002 0.5,30.500005 0.5,22.00001 C0.5,10.125883 10.125878,0.50000572 22.00001,0.5 z" Fill="#FF2F3640" Height="90" Stretch="Fill" Stroke="Black" Width="1280" StrokeThickness="2" MouseLeftButtonDown="ControlBox_MouseLeftButtonDown"/>
+            <Button x:Name="ExitButton" Content="X" Height="86" Canvas.Left="1165" Width="83" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="72" Canvas.Top="2" Click="ExitButton_Click" Foreground="#FFDCDDE1" Style="{DynamicResource ExitButtonStyle}"/>
+            <Button x:Name="MiniButton" Content="____" Height="86" Canvas.Left="1053.947" Width="104.106" FontSize="72" BorderBrush="{x:Null}" Background="{x:Null}" FontStretch="Expanded" FontWeight="ExtraBold"  Style="{DynamicResource MinimizeButtonStyle}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" Canvas.Top="2" Click="MiniButton_Click" Padding="1,-25,1,1" Foreground="#FFDCDDE1"/>
+            <Label x:Name="TitleLabel" Content="thisHack.cSharp" Height="54" Canvas.Left="121.5" Canvas.Top="24" Width="303" Foreground="#FF00A8FF" FontSize="36" MouseLeftButtonDown="TitleLabel_MouseLeftButtonDown"/>
+            <Image x:Name="IconImage" Height="64" Canvas.Left="37.5" Canvas.Top="16" Width="64" Source="cpm.png" MouseLeftButtonDown="IconImage_MouseLeftButtonDown"/>
+        </Canvas>
+        <Canvas x:Name="Menu_Canvas" Height="601" Canvas.Left="0.174" Canvas.Top="88.5" Width="289.697">
+            <Path x:Name="MenuBox" Data="M0,0 L52.25,0 52.25,0.031996027 179.079,0.031996027 C190.95313,0.032000002 200.579,9.6578779 200.579,21.531998 L200.579,576.94397 C200.579,588.81812 190.95313,598.44397 179.079,598.44397 L21.579001,598.44397 C9.7048821,598.44397 0.079004296,588.81812 0.07900022,576.94397 L0.07900022,80.912003 0,80.912003 z" Fill="#FF40739E" Height="601" Stretch="Fill" Stroke="Black" Width="291.635" StrokeThickness="2"/>
+            <WrapPanel x:Name="TopMenu" Height="214.667" Canvas.Left="13.826" Canvas.Top="81.833" Width="210.167">
+                <Canvas x:Name="EmployeeMenuCanvas" Height="58" Width="276" Margin="0,0,0,20" MouseEnter="EmployeeMenuCanvas_MouseEnter" MouseDown="EmployeeMenuCanvas_MouseDown">
+                    <Image x:Name="EmployeeIcon" Height="58" Width="71" Source="businessman.png" Canvas.Top="0.258"/>
+                    <Label x:Name="EmployeeLink" Content="Employee" Canvas.Left="71" Canvas.Top="0.258" FontSize="32" Height="58.407" Width="205" VerticalContentAlignment="Bottom" BorderBrush="#FF4CD137" BorderThickness="0,0,10,0" Foreground="#FFDCDDE1"/>
+                </Canvas>
+                <Canvas x:Name="ScheduleMenuCanvas" Height="58" Width="276" Margin="0,0,0,20" MouseEnter="ScheduleMenuCanvas_MouseEnter" MouseDown="ScheduleMenuCanvas_MouseDown">
+                    <Label x:Name="ScheduleLink" Content="Schedule" Canvas.Left="71" Canvas.Top="0.258" FontSize="32" Height="58.407" Width="205" BorderThickness="0,0,10,0" BorderBrush="#FFE1B12C" VerticalContentAlignment="Bottom" Foreground="#FFDCDDE1"/>
+                    <Image x:Name="ScheduleIcon" Height="58" Width="71" Source="calendar.png" Canvas.Top="0.258"/>
+                </Canvas>
+                <Canvas x:Name="CustomerMenuCanvas" Height="58" Width="276" MouseEnter="CustomerMenuCanvas_MouseEnter" MouseDown="CustomerMenuCanvas_MouseDown">
+                    <Label x:Name="CustomerLink" Content="Customer" Canvas.Left="71" Canvas.Top="0.258" FontSize="32" Height="58.407" Width="205" BorderThickness="0,0,10,0" BorderBrush="#FFE1B12C" VerticalContentAlignment="Bottom" Foreground="#FFDCDDE1"/>
+                    <Image x:Name="CustomerIcon" Height="58" Width="71" Source="customer-review.png" Canvas.Top="0.258"/>
+                </Canvas>
+            </WrapPanel>
+            <WrapPanel x:Name="Bottommenu" Canvas.Left="24.364" Orientation="Vertical" Canvas.Top="452" Width="265.333" Height="95">
+                <Image x:Name="UserImage" Height="95" Width="96.5" Source="man.png"/>
+                <Button x:Name="ProfileButton" Content="Profile" Height="96.24" Width="158.958" Background="{x:Null}" BorderBrush="#FF0097E6" BorderThickness="0,0,6,0" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,0,0,0" Click="ProfileButton_Click" Foreground="#FFDCDDE1" Style="{DynamicResource BlueButtonStyle}"/>
+            </WrapPanel>
+        </Canvas>
+        <Path Data="M15.787,31.386473 L15.781125,31.4376 15.787,31.442489 z M15.787,27.483223 L15.692693,27.766015 15.787,27.766015 z M0.81284118,15.759987 L3.9687431,15.843308 11.057867,18.70238 7.7199216,21.572287 13.344,22.547008 11.241717,24.406296 14.844,25.093872 13.619826,26.695363 14.812197,26.687984 15.787,27.445466 15.787,23.905999 39.131001,23.905999 39.131001,31.530999 15.787,31.530999 15.787,31.520166 15.577921,31.530999 14.515,31.250017 14.515461,31.245134 13.389643,30.891035 12.702527,30.656447 11.764868,30.235266 11.156001,29.938016 11.169378,29.901093 11.141185,29.937976&#xD;&#xA;10.437285,29.578295 9.7971282,29.235114 9.2031026,28.89092 8.2499371,28.250032 7.5405326,27.679675 7.5311356,27.687986 6.8901114,27.155695 6.093706,26.483848 5.3118477,25.703 4.5621262,24.843909 4.2500001,24.468777 4.2649973,24.405539 2.8716431,21.363122 1.3508768,17.952328 z M0,0 L13.936999,0 13.936999,10.983999 0,10.983999 z" Fill="#FF40739E" Height="32.15" Canvas.Left="2.234" Stretch="Fill" StrokeThickness="2" Canvas.Top="655.328" Width="39.194"/>
+    </Canvas>
+</Window>
